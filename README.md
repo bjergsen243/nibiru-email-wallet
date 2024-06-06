@@ -11,7 +11,7 @@ Email Wallet is an Nibiru contract wallet that can be controlled by sending emai
   - `Send 1 Nibi to friend@domain.com`
   - `Send 2.5 Nibi to nibi1tsgl9sr8ayy4s9fdf9mr2ck2tptpjy2shdj7ky`
 
-- ✓ Send ERC20 to email address and Nibi addresses.
+- ✓ Send CW20 to email address and Nibi addresses.
   - `Send 1.5 RHV to friend@skiff.com`
   - `Send 21.14 RHV to nibi1tsgl9sr8ayy4s9fdf9mr2ck2tptpjy2shdj7ky`
 
@@ -24,15 +24,14 @@ Email Wallet is an Nibiru contract wallet that can be controlled by sending emai
 ### In progress:
 
 - ✓ Install extensions for additional functionalities. Extensions can be developed for any DeFi protocols.
-  - `Install extension Uniswap`
-  - `Remove extension Uniswap`
+  - `Install extension Nibi-Swap`
+  - `Remove extension Nibi-Swap`
 
-- ✓ Use Uniswap extension to swap tokens.
+- ✓ Use Nibi-Swap extension to swap tokens.
   - `Swap 1 UNIBI to FHM`
   - `Swap 1 FHM to UNIBI`
-
-- ✓  Use custom DKIM Registry for complete control.
-  - `DKIM registry set to nibi1tsgl9sr8ayy4s9fdf9mr2ck2tptpjy2shdj7ky...`
+ 
+- ✓ Use account abstraction to be more privacy
 
 - ✓ Set email wallet to a new owner. New owner (EOA) can control the wallet by executing any calldata on a target contract.
   - `Exit Email Wallet. Set owner to nibi1tsgl9sr8ayy4s9fdf9mr2ck2tptpjy2shdj7ky...`
@@ -42,7 +41,6 @@ Email Wallet is an Nibiru contract wallet that can be controlled by sending emai
 - ✓ No need to remember any seed phrase or private key.
 - ✓ Operate the wallet by sending human readable emails.
 - ✓ Hide link from an email address to a wallet address.
-- ✓ Pay fee in ERC20 tokens.
 - ✓ Developers can build extensions to add new functionalities.
 
 #### Security Considerations:
