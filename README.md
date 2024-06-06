@@ -52,15 +52,43 @@ Email Wallet is an Nibiru contract wallet that can be controlled by sending emai
 
 
 ## Prerequisites
-
-
+1. Technology Stack Selection
+- Languages: Rust, TypeScript,
+- Frameworks and Libraries: Nodejs, Nibidjs,
+- Database: Postgres,
+  
+2. Development Environment
+- Tools: Cosmwasm, Nibid CLI
+- Testing tool: Jest
 
 ## Installation
 
 
 
 ## How it Works
+Emails you send are (usually) signed using a private key controlled by your email domain server according to a DKIM protocol. This signature is included in the headers section of the email.
 
+Email Wallet verify the DKIM signature of an email to ensure the mail was sent by the user and the contents are not forged. Instead of verifying the signature directly on-chain, a zk proof of signature is created (by a permissionless entity called Relayer) and verified on-chain.
+
+Here is how a typical interaction with the wallet looks like:
+
+- You send an email to Relayer's email address : "emailrelayer2003@gmail.com" with a subject like "Send 1 unibi to recipient@gmail.com".
+- The Relayer verifies the DKIM signature and creates a zk proof of email.
+- The ZK circuit extracts the subject, recipient email, timestamp, and other data from the email.
+- Relayer calls the smart contract with the zk proof and the extracted data.
+- Contract computes the subject from the extracted data and matches it with the subject passed by the Relayer.
+- The ZK proof of email is validated on-chain, which also validates the subject.
+- Private data like the sender email, recipient's email in the subject line, is not exposed on-chain.
+- The smart contract executes the transaction and sends 1 unibi to recipient's Email Wallet address.
+- The Relayer wait for the transaction confirmation, and send you and the recipient an email with the transaction details.
 
 
 ## How to Use
+You send an email to Relayer's email address : "emailrelayer2003@gmail.com" with a subject like : "COMMAND to recipient@gmail.com".
+
+Here are some COMMANDs, you can use:
+- To send nibiru to someone:
+  
+ `SEND <amount> to <recipient_mail_address>` 
+ 
+ `Ex : Send 1 unibi to recipient@gmail.com`
