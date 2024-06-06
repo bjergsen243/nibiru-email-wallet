@@ -90,13 +90,13 @@ You send an email to Relayer's email address : "emailrelayer2003@gmail.com" with
 Here are some COMMANDs, you can use:
 - To send nibiru/custom cw20 to someone:
 
-  `SEND <amount> <denom> to <recipient_mail_address>` 
-  `Ex: Send 1 unibi to recipient@gmail.com` ||
+  `SEND TOKEN <amount> <denom> to <recipient_mail_address>` 
+  `Ex: Send TOKEN 1 unibi to recipient@gmail.com` ||
 
    `Send TOKEN 10 tf/nibi1ty88gpudfh57kqghy62hw8k4nt7765gczu2gqry5gl9ldurrzrns92scum/nubis to recipient@gmail.com`
 - To send NFT/cw721 to someone:
   
-  `SEND <NFT_Contract_address> <Token_id> to recipient@gmail.com`
+  `SEND NFT <NFT_Contract_address> <Token_id> to recipient@gmail.com`
   
   `Ex: Send NFT nibi1jgpxjfetcgwnncms2dl0tt22dntnp0wtt28w6u5xeqqwfjh0p89spd40pr 5 to recipient@gmail.com`
 * Note: Make sure you have enough tokens to send
