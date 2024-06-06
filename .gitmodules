@@ -4,3 +4,6 @@
 [submodule "nibiru-scripts"]
 	path = nibiru-scripts
 	url = https://github.com/hduoc2003/nibiru-scripts
+[submodule "nibiru-contracts"]
+	path = nibiru-contracts
+	url = https://github.com/hduoc2003/nibiru-contracts
