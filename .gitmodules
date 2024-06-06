@@ -1,0 +1,6 @@
+[submodule "email-wallet"]
+	path = email-wallet
+	url = https://github.com/hduoc2003/email-wallet
+[submodule "nibiru-scripts"]
+	path = nibiru-scripts
+	url = https://github.com/hduoc2003/nibiru-scripts
