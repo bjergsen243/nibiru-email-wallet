@@ -37,6 +37,7 @@ Email Wallet is an Nibiru contract wallet that can be controlled by sending emai
   - `Exit Email Wallet. Set owner to nibi1tsgl9sr8ayy4s9fdf9mr2ck2tptpjy2shdj7ky...`
 
 #### Features:
+- ✓ Easy send any tokens to other address via Gmail
 - ✓ No need to install any browser extension or mobile app.
 - ✓ No need to remember any seed phrase or private key.
 - ✓ Operate the wallet by sending human readable emails.
@@ -87,8 +88,15 @@ Here is how a typical interaction with the wallet looks like:
 You send an email to Relayer's email address : "emailrelayer2003@gmail.com" with a subject like : "COMMAND to recipient@gmail.com".
 
 Here are some COMMANDs, you can use:
-- To send nibiru to someone:
+- To send nibiru/custom cw20 to someone:
+
+  `SEND <amount> <denom> to <recipient_mail_address>` 
+  `Ex: Send 1 unibi to recipient@gmail.com` ||
+
+   `Send 10 tf/nibi1ty88gpudfh57kqghy62hw8k4nt7765gczu2gqry5gl9ldurrzrns92scum/nubis to recipient@gmail.com`
+- To send NFT/cw721 to someone:
   
- `SEND <amount> to <recipient_mail_address>` 
- 
- `Ex : Send 1 unibi to recipient@gmail.com`
+  `SEND <NFT_Contract_address> <Token_id> to recipient@gmail.com`
+  
+  `Ex: Send nibi1jgpxjfetcgwnncms2dl0tt22dntnp0wtt28w6u5xeqqwfjh0p89spd40pr 5 to recipient@gmail.com`
+* Note: Make sure you have enough tokens to send
